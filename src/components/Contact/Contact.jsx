@@ -12,7 +12,7 @@ const Contact = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
     
-        formData.append("access_key", import.meta.env.VITE_ACCESS_KEY);
+        formData.append("access_key", import.meta.env.VITE_ACCESS_KEY); // Access key add to the .env file
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
