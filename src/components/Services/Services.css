@@ -13,7 +13,7 @@
 
 .services-title h1{
     padding: 0px 30px;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 600;
 }
 
@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    padding: 60px;
+    padding: 50px;
     border-radius: 10px;
     border: 2px solid white;
     transition: 0.4s;
@@ -44,7 +44,7 @@
 }
 
 .services-format h3{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -59,12 +59,12 @@
 
 .services-format p{
     color: #d4d4d4;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 40px;
     max-width: 300px;
 }
 
-.services_readmore~{
+.services_readmore{
     display: flex;
     gap: 20px;
     align-items: center;
