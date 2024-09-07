@@ -13,7 +13,7 @@
 
 .about-title h1{
     padding: 0px 30px;
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 600;
 }
 
@@ -24,9 +24,15 @@
     z-index: -1;
 }
 
-.about-sesction{
+.about-section{
     display: flex;
     gap: 80px;
+}
+
+.about-left img{
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
 }
 
 .about-right{
@@ -39,7 +45,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
 }
 

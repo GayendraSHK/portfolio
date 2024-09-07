@@ -5,7 +5,7 @@
     gap: 30px;
 }
 
-.footer-top{
+/* .footer-top{
     display: flex;
     justify-content: space-between;
 }
@@ -46,7 +46,16 @@
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
     transition: 0.3s;
+} 
+    
+.footer-email-input:hover{
+    border: 2px solid white;
 }
+
+.footer-subscribe:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}*/
 
 .footer-bottom{
     display: flex;
@@ -57,16 +66,7 @@
 .footer-bottom-right{
     display: flex;
     gap: 50px;
-    margin-bottom: 50px;
-}
-
-.footer-email-input:hover{
-    border: 2px solid white;
-}
-
-.footer-subscribe:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
+    margin-bottom: 30px;
 }
 
 @media(max-width:768px){
