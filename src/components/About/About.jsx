@@ -27,15 +27,15 @@ const About = () => {
                     delivering high-quality results and making a meaningful impact in the ever-evolving world of technology.
                     </p>
                 </div>
-                <div className="about-skills">
+                {/* <div className="about-skills">
                     <div className="about-skill"><p>HTML & CSS </p><hr style={{width:"50%"} }/></div>
                     <div className="about-skill"><p>React Js </p><hr style={{width:"70%"} }/></div>
                     <div className="about-skill"><p>JavaScript </p><hr style={{width:"60%"} }/></div>
                     <div className="about-skill"><p>Next Js </p><hr style={{width:"40%"} }/></div>
-                </div>
+                </div> */}
             </div>
         </div>
-        <div className="about-achievements">
+        {/* <div className="about-achievements">
             <div className="about-achievement">
                 <h1>10+</h1>
                 <p>YEARS OF EXPERIENCE</p>
@@ -50,7 +50,7 @@ const About = () => {
                 <h1>15+</h1>
                 <p>HAPPY CLIENTS</p>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }
