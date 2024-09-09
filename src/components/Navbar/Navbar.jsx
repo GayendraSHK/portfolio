@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef } from 'react';
 import './Navbar.css'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import underline from '../../assets/nav_underline.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import menu_open from '../../assets/menu_open.svg'
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-        <img src={logo} alt='logo' />
+        <img src={logo} alt='logo' className='nav-logo' />
         <img src={menu_open} onClick={openMenu} alt="" className='nav-mob-open' />
         <ul ref={menuRef} className="nav-menu">
           <img src={menu_close} onClick={closeMenu} alt="" className="nav-mob-close" />

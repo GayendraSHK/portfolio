@@ -6,13 +6,12 @@
 }
 
 .hero img {
-    margin-top: 100px;
-    width: 200px;
-    height: 200px; /* Ensures the image remains a circle */
-    border-radius: 50%; /* Creates the circular shape */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Adds a shadow */
-    //border: 10px solid #000000; /* Creates a circular frame with orange color */
-    object-fit: cover; /* Ensures the image scales properly within the circle */
+    margin-top: 180px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); 
+    object-fit: cover;
 }
 
 .hero h1{
@@ -23,7 +22,7 @@
 }
 
 .hero h1 span{
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+    background: linear-gradient(270deg, #00C9FF 10%, #92FE9D 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -48,7 +47,7 @@
 .hero-connect{
     padding: 25px 45px;
     border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+    background: linear-gradient(264deg, #24c6dc -5.09%, #514a9d 106.28%);
     cursor: pointer;
 }
 

@@ -17,13 +17,14 @@ const About = () => {
             <div className="about-right">
                 <div className="about-para">
                     <p>
-                        I am an experienced Frontend Developer with over a decade of professional expertise in the field. 
-                        Throughout my career, I have had the privilege of collaborating with prestigious organizations, contributing 
-                        to their success and growth.
+                    I am a highly motivated and enthusiastic IT undergraduate at the University of Moratuwa, driven by a 
+                    passion for technology and a commitment to excellence. With a solid academic background and strong 
+                    technical skills, I thrive in dynamic environments where I can tackle challenges and continuously grow.
                     </p>
                     <p>
-                        My passion for frontend development is not only reflected in my extensive experience but also in the enthusiasm 
-                        and dedication I bring to each project.
+                    Eager to expand my knowledge and stay at the forefront of emerging technologies, I am dedicated to 
+                    contributing to innovative, impactful projects. Whether working independently or as part of a team, I focus on 
+                    delivering high-quality results and making a meaningful impact in the ever-evolving world of technology.
                     </p>
                 </div>
                 <div className="about-skills">
