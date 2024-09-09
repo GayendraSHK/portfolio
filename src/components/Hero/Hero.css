@@ -5,8 +5,14 @@
     gap: 35px;
 }
 
-.hero img{
+.hero img {
     margin-top: 100px;
+    width: 200px;
+    height: 200px; /* Ensures the image remains a circle */
+    border-radius: 50%; /* Creates the circular shape */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Adds a shadow */
+    //border: 10px solid #000000; /* Creates a circular frame with orange color */
+    object-fit: cover; /* Ensures the image scales properly within the circle */
 }
 
 .hero h1{
