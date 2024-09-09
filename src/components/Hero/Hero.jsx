@@ -8,11 +8,11 @@ const Hero = () => {
   return (
     <div id='home' className='hero'>
         <img src={profile_img} alt="" />
-        <h1><span>I'm Kaveesha Gayendra,</span> Software Engineer.</h1>
-        <p>
+        <h1><span>I'm Kaveesha Gayendra,</span> Full Stack Developer.</h1>
+        {/* <p>
           I am a frontend developer from California, USA with 10 years of experience in 
           multiple companies like Microsoft, Tesla and Apple.
-        </p>
+        </p> */}
         <div className="hero-action">
           <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect With Me</AnchorLink></div>
           <div className="hero-resume">My Resume</div>

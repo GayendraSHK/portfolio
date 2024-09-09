@@ -1,11 +1,33 @@
-.navbar{
+/* .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px 170px;
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 170px;
+    padding: 10px;
+    position: fixed; /* Fixes the navbar to the top */
+    top: 0;
+    width: calc(100% - 340px); /* Adjust based on the margins */
+    z-index: 100; /* Ensures the navbar stays on top */
+    backdrop-filter: blur(10px); /* Glass effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 12px; /* Optional rounded corners */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for clarity */
 }
 
-.nav-menu{
+
+.nav-logo {
+    width: 120px; /* Adjust size */
+    height: auto;
+}
+
+.nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
@@ -13,80 +35,81 @@
     font-size: 17px;
 }
 
-.nav-connect{
+.nav-connect {
     padding: 20px 40px;
     border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    background: linear-gradient(267deg, #24c6dc 0.36%, #514a9d 102.06%);
     font-size: 16px;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.nav-connect:hover{
+.nav-connect:hover {
     transform: scale(1.05);
 }
 
-.nav-menu li{
+.nav-menu li {
     display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
 }
 
-.nav-menu li img{
+.nav-menu li img {
     display: flex;
     margin: auto;
 }
 
-.anchor-link{
+.anchor-link {
     text-decoration: none;
     color: white;
 }
 
-.nav-mob-close{
+.nav-mob-close {
     display: none;
 }
 
-.nav-mob-open{
+.nav-mob-open {
     display: none;
 }
 
-@media(max-width:768px){
-    .navbar{
-        margin: 20px 50px;
+@media (max-width: 768px) {
+    .navbar {
+        margin: 0;
+        padding: 20px 50px;
     }
-    .nav-connect{
+    .nav-connect {
         display: none;
     }
-    .nav-mob-open{
+    .nav-mob-open {
         display: block;
         position: fixed;
         right: 30px;
     }
-    .nav-mob-close{
+    .nav-mob-close {
         display: block;
         position: relative;
         top: 30px;
         left: 290px;
         width: 30px;
     }
-    .nav-menu{
+    .nav-menu {
         position: fixed;
         flex-direction: column;
         align-items: start;
         top: 0;
         gap: 30px;
-        background-color: #1F0016;
+        background-color: rgba(31, 0, 22, 0.9); /* Glass effect for mobile */
         width: 350px;
-        height: 100%
-        z-index: 2
+        height: 100%;
+        z-index: 2;
         transition: right 0.5s;
         right: -350px;
     }
-    .nav-menu li{
+    .nav-menu li {
         font-size: 30px;
         padding-left: 100px;
         flex-direction: row;
-        gap:20px;
+        gap: 20px;
     }
 }
