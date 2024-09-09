@@ -1,9 +1,10 @@
-<svg width="227" height="72" viewBox="0 0 227 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 61.1395C0 55.1999 5.16729 50.5816 11.0696 51.2459L187.039 71.052C209.597 73.591 228.703 54.5844 226.282 32.0133C223.76 8.50255 199.379 -6.00841 177.511 2.98631L13.7433 70.3471C7.19098 73.0422 0 68.2245 0 61.1395Z" fill="url(#paint0_linear_2160_23)"/>
-<defs>
-<linearGradient id="paint0_linear_2160_23" x1="851.318" y1="47.553" x2="756.751" y2="339.402" gradientUnits="userSpaceOnUse">
-<stop stop-color="#DF8908"/>
-<stop offset="1" stop-color="#B415FF"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 227 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="106.962" cy="45.839" r="112.742" id="gradient-0" gradientTransform="matrix(0.950963, -0.158256, 0.164159, 0.986434, -2.279779, 17.549193)">
+      <stop offset="0" style="stop-color: rgb(81, 74, 157);"/>
+      <stop offset="1" style="stop-color: rgb(36, 198, 220);"/>
+    </radialGradient>
+  </defs>
+  <path d="M 0 61.14 C 0 55.2 5.144 50.582 11.02 51.246 L 186.209 71.052 C 208.667 73.591 227.688 54.584 225.278 32.013 C 222.767 8.503 198.494 -6.008 176.723 2.986 L 13.682 70.347 C 7.159 73.042 0 68.225 0 61.14 Z" style="fill: url('#gradient-0');"/>
 </svg>
