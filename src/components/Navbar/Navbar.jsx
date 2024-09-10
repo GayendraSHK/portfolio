@@ -35,14 +35,14 @@ const Navbar = () => {
               <p onClick={()=>setMenu("about")}>About Me</p>
             </AnchorLink>
           </li>
-          <li className={menu === "services" ? 'selected' : ''}>
-            <AnchorLink className='anchor-link' offset={50} href='#services'>
-              <p onClick={()=>setMenu("services")}>Services</p>
+          <li className={menu === "technologies" ? 'selected' : ''}>
+            <AnchorLink className='anchor-link' offset={50} href='#technologies'>
+              <p onClick={()=>setMenu("technologies")}>Technologies</p>
             </AnchorLink>
           </li>
-          <li className={menu === "work" ? 'selected' : ''}>
-            <AnchorLink className='anchor-link' offset={50} href='#work'>
-              <p onClick={()=>setMenu("work")}>Portfolio</p>
+          <li className={menu === "projects" ? 'selected' : ''}>
+            <AnchorLink className='anchor-link' offset={50} href='#projects'>
+              <p onClick={()=>setMenu("projects")}>Projects</p>
             </AnchorLink>
           </li>
           <li className={menu === "contact" ? 'selected' : ''}>
