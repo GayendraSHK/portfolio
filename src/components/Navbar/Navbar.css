@@ -1,10 +1,3 @@
-/* .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 170px;
-} */
-
 .navbar {
     display: flex;
     align-items: center;
@@ -72,6 +65,42 @@
 .nav-mob-open {
     display: none;
 }
+
+/* Base styles for each nav item */
+.nav-menu li p {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-menu li p::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #24c6dc; /* Adjust to the color you want for the underline */
+    transition: width 0.3s ease;
+}
+
+/* When hovered */
+.nav-menu li:hover p::after {
+    width: 100%;
+}
+
+/* Selected item */
+.selected p {
+    color: #24c6dc; /* Adjust selected color */
+}
+
+/* Underline for selected item */
+.selected p::after {
+    width: 100%;
+    background-color: #24c6dc; /* Same color for underline */
+}
+
 
 @media (max-width: 768px) {
     .navbar {
