@@ -47,7 +47,7 @@ const Navbar = () => {
           </li>
           <li className={menu === "contact" ? 'selected' : ''}>
             <AnchorLink className='anchor-link' offset={50} href='#contact'>
-              <p onClick={()=>setMenu("contact")}>Contact</p>
+              <p onClick={()=>setMenu("contact")}>Contact Me</p>
             </AnchorLink>
           </li>
         </ul>
