@@ -13,6 +13,7 @@ const Hero = () => {
     const options = {
       strings: [
         "Full Stack Developer.",
+        "IT Undergraduate.",
       ],
       typeSpeed: 50,
       backSpeed: 50,
