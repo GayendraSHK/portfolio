@@ -135,16 +135,18 @@
 
 .modal-content button {
     padding: 10px 20px;
-    background-color: #ff00ff;
+    background-color: #000033;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    display: block;       /* Makes the button act like a block element */
+    margin: 20px auto;    /* Centers the button horizontally */
 }
 
 .modal-content button:hover {
-    background-color: #d400d4;
+    background-color: #000000;
 }
 
 /* Responsive styling for smaller screens */
