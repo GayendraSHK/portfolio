@@ -17,11 +17,15 @@
 .hero h1{
     text-align: center;
     width: 70%;
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 600;
 }
 
-.hero h1 span{
+.hero span{
+    text-align: center;
+    width: 70%;
+    font-size: 65px;
+    font-weight: 600;
     background: linear-gradient(270deg, #00C9FF 10%, #92FE9D 100%);
     background-clip: text;
     -webkit-background-clip: text;
