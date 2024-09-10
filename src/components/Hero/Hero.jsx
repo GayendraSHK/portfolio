@@ -17,6 +17,7 @@ const Hero = () => {
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
+      showCursor: false, // Disable the blinking cursor
     };
 
     const typed = new Typed(typedRef.current, options);
