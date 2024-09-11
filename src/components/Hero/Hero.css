@@ -1,9 +1,29 @@
-.hero{
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hero {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 35px;
-}
+    opacity: 0; /* Start hidden */
+    transform: translateY(-20px); /* Start with an upward offset */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition */
+  }
+  
+  .hero.animate-hero {
+    animation: fadeIn 2s ease-in-out;
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Reset transform */
+  }
 
 .hero img {
     margin-top: 180px;

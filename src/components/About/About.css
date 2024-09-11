@@ -1,11 +1,31 @@
-.about {
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
-}
+    opacity: 0; /* Start with hidden state */
+    transform: translateY(20px); /* Initial transform */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Transition effects */
+  }
+  
+  .about.animate {
+    animation: fadeInUp 2s ease-in-out;
+    opacity: 1; /* Show section */
+    transform: translateY(0); /* Reset transform */
+  }
 
 .about-title {
     position: relative;

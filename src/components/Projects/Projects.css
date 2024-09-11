@@ -1,11 +1,31 @@
-.projects {
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start with a downward offset */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .projects {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
-}
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Initial downward offset */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition */
+  }
+  
+  .projects.animate-projects {
+    animation: fadeIn 2s ease-in-out;
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Reset transform */
+  }
 
 .projects-title {
     position: relative;

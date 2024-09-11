@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Projects.css';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import mywork_data from '../../assets/mywork_data';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const projectsRef = useRef(null);
 
   const handleProjectClick = (work) => {
     setSelectedProject(work);
@@ -15,8 +16,32 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
+  useEffect(() => {
+    const section = projectsRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            section.classList.add('animate-projects');
+            observer.unobserve(section); // Stop observing after the animation triggers
+          }
+        });
+      },
+      { threshold: 0.3 } // Trigger when 10% of the section is in view
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
+
   return (
-    <div id='projects' className='projects'>
+    <div ref={projectsRef} id='projects' className='projects'>
       <div className="projects-title">
         <h1>My Projects</h1>
         <img src={theme_pattern} alt="" />
