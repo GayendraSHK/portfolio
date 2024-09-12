@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React, { useRef, useEffect } from 'react';
 import './Hero.css';
 import profile_img from '../../assets/profile_img2.png';
@@ -41,7 +41,7 @@ const Hero = () => {
           }
         });
       },
-      { threshold: 0.3 } // Trigger when 10% of the section is in view
+      { threshold: 0.3 } // Trigger when 30% of the section is in view
     );
 
     if (section) {
