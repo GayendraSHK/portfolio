@@ -14,8 +14,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    gap: 60px; /* Reduced gap for smaller screens */
+    margin: 60px 120px; /* Adjusted margin */
     opacity: 0; /* Start with hidden state */
     transform: translateY(20px); /* Initial transform */
     transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Transition effects */
@@ -25,62 +25,99 @@
     animation: fadeInUp 2s ease-in-out;
     opacity: 1; /* Show section */
     transform: translateY(0); /* Reset transform */
-  }  
-
-.technologies-title {
+  }
+  
+  .technologies-title {
     position: relative;
     top: 30px;
-}
-
-.technologies-title h1 {
-    padding: 0px 30px;
-    font-size: 60px;
+  }
+  
+  .technologies-title h1 {
+    padding: 0 30px;
+    font-size: 50px; /* Adjusted font size */
     font-weight: 600;
-}
-
-.technologies-title img {
+  }
+  
+  .technologies-title img {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -1;
-}
-
-.technologies-icons-container {
+  }
+  
+  .technologies-icons-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 icons per row */
-    gap: 4rem;
+    grid-template-columns: repeat(4, 1fr); /* 4 icons per row for larger screens */
+    gap: 2.5rem; /* Reduced gap between icons */
     align-items: center;
     justify-items: center;
-}
-
-.icon-wrapper {
+  }
+  
+  .icon-wrapper {
     border-radius: 1rem;
     border: 3px solid #514a9d;
     padding: 1rem;
     transition: transform 0.3s ease;
-}
-
-.icon-wrapper:hover {
+  }
+  
+  .icon-wrapper:hover {
     transform: scale(1.2);
-}
-
-.icon {
+  }
+  
+  .icon {
     width: 4.5rem;
     height: 4.5rem;
     object-fit: contain;
-}
-
-@media(max-width: 768px) {
-    .technologies-icons-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 icons per row on smaller screens */
-        gap: 1rem;
-    }
-
-    .technologies-title h1 {
-        font-size: 50px;
-    }
-
+  }
+  
+  /* Tablet responsiveness */
+  @media(max-width: 768px) {
     .technologies {
-        margin: 20px 70px;
+      margin: 40px 50px;
     }
-}
+  
+    .technologies-title h1 {
+      font-size: 40px; /* Reduced title size */
+    }
+  
+    .technologies-icons-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+      gap: 1.5rem;
+    }
+  
+    .icon-wrapper {
+      padding: 0.8rem;
+    }
+  
+    .icon {
+      width: 3.5rem;
+      height: 3.5rem; /* Reduced icon size */
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media(max-width: 480px) {
+    .technologies {
+      margin: 20px 20px;
+      gap: 40px;
+    }
+  
+    .technologies-title h1 {
+      font-size: 35px; /* Smaller title for mobile */
+    }
+  
+    .technologies-icons-container {
+      grid-template-columns: repeat(1, 1fr); /* 1 icon per row */
+      gap: 1rem;
+    }
+  
+    .icon-wrapper {
+      padding: 0.6rem;
+    }
+  
+    .icon {
+      width: 3rem;
+      height: 3rem; /* Smaller icons for mobile */
+    }
+  }
+  

@@ -1,27 +1,28 @@
-.footer{
+.footer {
     margin: 50px 170px;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-/* .footer-top{
+/* Uncomment and adjust the .footer-top section as needed
+.footer-top {
     display: flex;
     justify-content: space-between;
 }
 
-.footer-top-left p{
+.footer-top-left p {
     font-size: 20px;
     max-width: 400px;
 }
 
-.footer-top-right{
+.footer-top-right {
     display: flex;
     align-items: center;
     gap: 35px;
 }
 
-.footer-email-input{
+.footer-email-input {
     display: flex;
     gap: 30px;
     padding: 20px 30px;
@@ -30,7 +31,7 @@
     padding-right: 80px;
 }
 
-.footer-email-input input{
+.footer-email-input input {
     outline: none;
     border: none;
     background: transparent;
@@ -39,47 +40,74 @@
     font-size: 18px;
 }
 
-.footer-subscribe{
+.footer-subscribe {
     font-size: 20px;
     padding: 22px 50px;
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
     transition: 0.3s;
-} 
-    
-.footer-email-input:hover{
+}
+
+.footer-email-input:hover {
     border: 2px solid white;
 }
 
-.footer-subscribe:hover{
+.footer-subscribe:hover {
     transform: scale(1.1);
     transition: 0.3s;
-}*/
+}
+*/
 
-.footer-bottom{
+.footer-bottom {
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    align-items: center; /* Align items vertically centered */
 }
 
-.footer-bottom-right{
+.footer-bottom-left {
+    flex: 1; /* Ensures it takes up available space */
+}
+
+.footer-bottom-right {
     display: flex;
     gap: 50px;
     margin-bottom: 30px;
 }
 
-@media(max-width:768px){
-    .footer{
-        margin: 50px 70px;
+@media (max-width: 768px) {
+    .footer {
+        margin: 50px 30px; /* Reduced margins for smaller screens */
     }
-    .footer-top{
-        flex-direction: column;
-        gap: 50px;
+
+    .footer-bottom {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+        font-size: 16px; /* Adjust font size for better readability */
     }
-    .footer-bottom{
-        display: flex;
-        flex-direction: column-reverse;
-        margin-bottom: 50px;
+
+    .footer-bottom-right {
+        gap: 30px; /* Reduced gap for smaller screens */
+        margin-bottom: 20px; /* Reduced margin */
+    }
+
+    .footer-bottom-left {
+        text-align: center; /* Center text on small screens */
+        margin-bottom: 20px; /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin: 30px 15px; /* Further reduced margins */
+    }
+
+    .footer-bottom {
+        font-size: 14px; /* Adjust font size for very small screens */
+    }
+
+    .footer-bottom-right {
+        gap: 20px; /* Further reduced gap */
     }
 }

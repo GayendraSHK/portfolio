@@ -43,7 +43,7 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.3 } // Trigger when 10% of the section is in view
+      { threshold: 0.3 } // Trigger when 30% of the section is in view
     );
 
     if (section) {
@@ -63,7 +63,7 @@ const About = () => {
       </div>
       <div className="about-section">
         <div className="about-left">
-          <img src={profile_img} alt="" />
+          <img src={profile_img} alt="Profile" />
         </div>
         <div className="about-right">
           <div className="about-para">
