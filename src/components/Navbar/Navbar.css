@@ -4,18 +4,20 @@
     justify-content: space-between;
     margin: 0 170px;
     padding: 10px;
-    position: fixed; /* Fixes the navbar to the top */
+    position: fixed;
     top: 0;
-    width: calc(100% - 340px); /* Adjust based on the margins */
-    z-index: 100; /* Ensures the navbar stays on top */
-    backdrop-filter: blur(10px); /* Glass effect */
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border-radius: 12px; /* Optional rounded corners */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for clarity */
+    width: calc(100% - 340px);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
+/* Adjust logo size for all screen sizes */
 .nav-logo {
-    width: 120px; /* Adjust size */
+    width: 120px;
     height: auto;
 }
 
@@ -33,7 +35,7 @@
     background: linear-gradient(267deg, #24c6dc 0.36%, #514a9d 102.06%);
     font-size: 16px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-connect:hover {
@@ -47,32 +49,23 @@
     cursor: pointer;
 }
 
-.nav-menu li img {
-    display: flex;
-    margin: auto;
-}
-
 .anchor-link {
     text-decoration: none;
     color: white;
 }
 
-.nav-mob-close {
+/* Mobile menu toggle buttons */
+.nav-mob-close, .nav-mob-open {
     display: none;
 }
 
-.nav-mob-open {
-    display: none;
-}
-
-/* Base styles for each nav item */
+/* Base styles for the nav item and underline animation */
 .nav-menu li p {
     position: relative;
     padding-bottom: 5px;
     transition: color 0.3s ease;
 }
 
-/* Underline animation */
 .nav-menu li p::after {
     content: '';
     position: absolute;
@@ -80,40 +73,64 @@
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: #24c6dc; /* Adjust to the color you want for the underline */
+    background-color: #24c6dc;
     transition: width 0.3s ease;
 }
 
-/* When hovered */
+/* Hover effect for underline */
 .nav-menu li:hover p::after {
     width: 100%;
 }
 
-/* Selected item */
+/* Selected menu item */
 .selected p {
-    color: #24c6dc; /* Adjust selected color */
+    color: #24c6dc;
 }
 
-/* Underline for selected item */
 .selected p::after {
     width: 100%;
-    background-color: #24c6dc; /* Same color for underline */
+    background-color: #24c6dc;
 }
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .navbar {
+        margin: 0;
+        padding: 15px 30px;
+        width: calc(100% - 60px);
+    }
+
+    .nav-logo {
+        width: 100px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+        font-size: 16px;
+    }
+
+    .nav-connect {
+        font-size: 14px;
+        padding: 15px 30px;
+    }
+}
 
 @media (max-width: 768px) {
     .navbar {
-        margin: 0;
-        padding: 20px 50px;
+        padding: 20px 20px;
+        width: 100%;
     }
+
     .nav-connect {
         display: none;
     }
+
     .nav-mob-open {
         display: block;
         position: fixed;
-        right: 30px;
+        right: 20px;
     }
+
     .nav-mob-close {
         display: block;
         position: relative;
@@ -121,23 +138,44 @@
         left: 290px;
         width: 30px;
     }
+
     .nav-menu {
         position: fixed;
         flex-direction: column;
         align-items: start;
         top: 0;
         gap: 30px;
-        background-color: rgba(31, 0, 22, 0.9); /* Glass effect for mobile */
-        width: 350px;
+        background-color: rgba(31, 0, 22, 0.9);
+        width: 300px;
         height: 100%;
         z-index: 2;
         transition: right 0.5s;
-        right: -350px;
+        right: -300px;
     }
+
     .nav-menu li {
-        font-size: 30px;
-        padding-left: 100px;
+        font-size: 24px;
+        padding-left: 50px;
         flex-direction: row;
         gap: 20px;
+    }
+
+    .nav-menu li p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        width: 80px;
+    }
+
+    .nav-menu {
+        width: 250px;
+    }
+
+    .nav-menu li {
+        font-size: 20px;
+        padding-left: 30px;
     }
 }

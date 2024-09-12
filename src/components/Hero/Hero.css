@@ -14,40 +14,40 @@
     align-items: center;
     flex-direction: column;
     gap: 35px;
-    opacity: 0; /* Start hidden */
-    transform: translateY(-20px); /* Start with an upward offset */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition */
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
   }
-
+  
   .hero h1 {
-    min-height: 1.7em; /* Adjust based on the font size */
+    min-height: 1.7em;
     display: inline-block;
     margin: 0;
   }
   
   .hero.animate-hero {
     animation: fadeIn 2s ease-in-out;
-    opacity: 1; /* Make visible */
-    transform: translateY(0); /* Reset transform */
+    opacity: 1;
+    transform: translateY(0);
   }
-
-.hero img {
+  
+  .hero img {
     margin-top: 180px;
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
     object-fit: cover;
-}
-
-.hero h1{
+  }
+  
+  .hero h1 {
     text-align: center;
     width: 70%;
     font-size: 60px;
     font-weight: 600;
-}
-
-.hero span{
+  }
+  
+  .hero span {
     text-align: center;
     width: 70%;
     font-size: 65px;
@@ -56,74 +56,118 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.hero p{
+  }
+  
+  .hero p {
     width: 50%;
     text-align: center;
     font-size: 22px;
     line-height: 40px;
-}
-
-.hero-action{
+  }
+  
+  .hero-action {
     display: flex;
     align-items: center;
     gap: 25px;
     font-size: 17px;
     font-weight: 500;
     margin-bottom: 50px;
-}
-
-.hero-connect{
+  }
+  
+  .hero-connect {
     padding: 25px 45px;
     border-radius: 50px;
     background: linear-gradient(264deg, #24c6dc -5.09%, #514a9d 106.28%);
     cursor: pointer;
-}
-
-.hero-resume{
+  }
+  
+  .hero-resume {
     padding: 25px 75px;
     border-radius: 50px;
     border: 2px solid #FFF;
     cursor: pointer;
-}
-
-.hero-connect:hover{
+  }
+  
+  .hero-connect:hover {
     border: 2px solid white;
-}
-
-.hero-resume:hover{
+  }
+  
+  .hero-resume:hover {
     border-color: #B415FF;
-}
-
-@media(max-width:768px){
-    .hero img{
-        margin-top: 120px;
-        width: 260px;
+  }
+  
+  /* Tablet Responsiveness */
+  @media (max-width: 768px) {
+    .hero img {
+      margin-top: 120px;
+      width: 180px; /* Reduced size for tablets */
     }
-    .hero h1{
-        margin-top: 50px;
-        width: 90%;
-        font-size: 50px;
+  
+    .hero h1 {
+      margin-top: 30px;
+      width: 90%;
+      font-size: 40px;
     }
-    .hero p{
-        width: 60%;
-        font-size: 18px;
-        line-height: 32px;
-        margin: 10px 0px;
+  
+    .hero span {
+      font-size: 45px; /* Adjusted for readability */
     }
-    .hero-action{
-        gap: 16px;
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 50px;
+  
+    .hero p {
+      width: 60%;
+      font-size: 18px;
+      line-height: 32px;
+      margin: 10px 0px;
     }
-    .hero-connect{
-        padding: 20px 30px;
-        border-radius: 40px;
+  
+    .hero-action {
+      gap: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 40px;
     }
-    .hero-resume{
-        padding:20px 50px;
-        border-radius: 40px;
+  
+    .hero-connect, .hero-resume {
+      padding: 20px 30px;
+      border-radius: 40px;
     }
-}
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    .hero img {
+      margin-top: 80px;
+      width: 120px;
+      height: 120px;
+    }
+  
+    .hero h1 {
+      margin-top: 20px;
+      width: 100%;
+      font-size: 30px;
+    }
+  
+    .hero span {
+      font-size: 35px;
+    }
+  
+    .hero p {
+      width: 80%;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  
+    .hero-action {
+      flex-direction: column;
+      gap: 12px;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+  
+    .hero-connect, .hero-resume {
+      padding: 15px 25px;
+      border-radius: 35px;
+      font-size: 14px;
+    }
+  }
+  
