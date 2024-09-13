@@ -67,6 +67,7 @@
 }
 
 .footer-bottom-left {
+    margin-top: -30px;
     flex: 1; /* Ensures it takes up available space */
 }
 
