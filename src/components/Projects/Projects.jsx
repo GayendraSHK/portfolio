@@ -46,6 +46,7 @@ const Projects = () => {
         <h1>My Projects</h1>
         <img src={theme_pattern} alt="" />
       </div>
+      <br />
       <div className="projects-container">
         {mywork_data.map((work, index) => (
           <div key={index} className="project-item">
@@ -76,6 +77,7 @@ const Projects = () => {
           </div>
         </div>
       )}
+      <br />
     </div>
   );
 };

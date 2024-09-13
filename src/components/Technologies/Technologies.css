@@ -73,15 +73,21 @@
   /* Tablet responsiveness */
   @media(max-width: 768px) {
     .technologies {
-      margin: 40px 50px;
+      margin: 80px 20px;
     }
   
     .technologies-title h1 {
-      font-size: 40px; /* Reduced title size */
+      font-size: 40px;
+      padding: 0;
+    }
+
+    .technologies-title img {
+      width: 100px;
+      right: -10px;
     }
   
     .technologies-icons-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+      grid-template-columns: repeat(3, 1fr); /* 2 icons per row */
       gap: 1.5rem;
     }
   
@@ -98,12 +104,12 @@
   /* Mobile responsiveness */
   @media(max-width: 480px) {
     .technologies {
-      margin: 20px 20px;
+      margin: 80px 20px;
       gap: 40px;
     }
   
     .technologies-title h1 {
-      font-size: 35px; /* Smaller title for mobile */
+      font-size: 40px; /* Smaller title for mobile */
     }
   
     .technologies-icons-container {

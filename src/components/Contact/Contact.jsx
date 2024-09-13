@@ -80,7 +80,7 @@ const Contact = () => {
             </div>
             <div className="contact-detail">
               <img src={call_icon} alt="" />
-              <p>+94 7x xxx xxxx</p>
+              <p>+94 71 658 8619</p>
             </div>
             <div className="contact-detail">
               <img src={location_icon} alt="" />

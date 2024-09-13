@@ -78,12 +78,16 @@
     font-size: 20px;
     font-weight: 500;
   }
+
+  .about-para p {
+    text-align: justify;
+  }
   
   @media(max-width: 768px) {
     .about {
       gap: 80px;
       margin: 50px 20px;
-      align-items: start;
+      //align-items: start;
     }
     .about-title h1 {
       font-size: 40px;

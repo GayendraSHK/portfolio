@@ -100,7 +100,8 @@
   @media (max-width: 768px) {
     .hero img {
       margin-top: 120px;
-      width: 180px; /* Reduced size for tablets */
+      width: 200px; /* Reduced size for tablets */
+      height: 200px; /* Reduced size for tablets */
     }
   
     .hero h1 {

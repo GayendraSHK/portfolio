@@ -44,6 +44,8 @@ const Technologies = () => {
         <img src={theme_pattern} alt="Pattern" />
       </div>
 
+      <br />
+
       <div className="technologies-icons-container">
         <div className="icon-wrapper">
           <img src={react_icon} alt="React" className="icon" />
