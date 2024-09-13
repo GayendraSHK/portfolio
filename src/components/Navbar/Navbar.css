@@ -15,7 +15,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Adjust logo size for all screen sizes */
 .nav-logo {
     width: 120px;
     height: auto;
@@ -54,12 +53,10 @@
     color: white;
 }
 
-/* Mobile menu toggle buttons */
 .nav-mob-close, .nav-mob-open {
     display: none;
 }
 
-/* Base styles for the nav item and underline animation */
 .nav-menu li p {
     position: relative;
     padding-bottom: 5px;
@@ -77,12 +74,10 @@
     transition: width 0.3s ease;
 }
 
-/* Hover effect for underline */
 .nav-menu li:hover p::after {
     width: 100%;
 }
 
-/* Selected menu item */
 .selected p {
     color: #24c6dc;
 }
@@ -117,8 +112,9 @@
 
 @media (max-width: 768px) {
     .navbar {
-        padding: 20px 20px;
+        padding: 20px 10px; /* Adjusted padding for mobile */
         width: 100%;
+        margin: 0;
     }
 
     .nav-connect {
@@ -128,34 +124,41 @@
     .nav-mob-open {
         display: block;
         position: fixed;
-        right: 20px;
+        top: 15px;
+        right: 30px; /* Adjusted position for better visibility */
+        width: 30px;
+        height: auto;
+        cursor: pointer;
     }
 
     .nav-mob-close {
         display: block;
         position: relative;
-        top: 30px;
-        left: 290px;
-        width: 30px;
+        top: 20px;
+        right: -140px; /* Adjusted position for better visibility */
+        width: 25px;
+        height: auto;
+        cursor: pointer;
     }
 
     .nav-menu {
         position: fixed;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         top: 0;
         gap: 30px;
-        background-color: rgba(31, 0, 22, 0.9);
-        width: 300px;
+        background-color: rgba(31, 0, 22, 0.9) !important; /* Ensure background color is applied */
+        width: 250px; /* Adjusted width */
         height: 100%;
         z-index: 2;
         transition: right 0.5s;
-        right: -300px;
+        right: -250px; /* Adjusted to match the width */
+        color: white; /* Ensure text color for better contrast */
     }
 
     .nav-menu li {
         font-size: 24px;
-        padding-left: 50px;
+        padding-left: 30px; /* Adjusted padding */
         flex-direction: row;
         gap: 20px;
     }
@@ -171,11 +174,14 @@
     }
 
     .nav-menu {
-        width: 250px;
+        width: 200px; /* Adjusted for very small screens */
+        //background-color: #fff; /* Ensure background color is applied */
+        color: white; /* Ensure text color for better contrast */
+        //background: linear-gradient(267deg, #24c6dc 0.36%, #514a9d 102.06%);
     }
 
     .nav-menu li {
         font-size: 20px;
-        padding-left: 30px;
+        padding-left: 20px; /* Adjusted padding */
     }
 }
