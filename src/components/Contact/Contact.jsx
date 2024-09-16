@@ -14,25 +14,57 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", import.meta.env.VITE_ACCESS_KEY); // Access key add to the .env file (Web3Forms)
+    // Basic validation
+    const name = formData.get('name').trim();
+    const email = formData.get('email').trim();
+    const message = formData.get('message').trim();
+
+    // Name validation
+    if (!name) {
+      alert('Please enter your name.');
+      return;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+      alert('Please enter your email.');
+      return;
+    } else if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Message validation
+    if (!message) {
+      alert('Please enter your message.');
+      return;
+    }
+
+    // Add access key from environment variables
+    formData.append("access_key", import.meta.env.VITE_ACCESS_KEY);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      }).then((res) => res.json());
 
-    if (res.success) {
-      alert(res.message);
-      event.target.reset();  // Clear the form after submission
-    } else {
-      alert('Something went wrong. Please try again.');
+      if (res.success) {
+        alert(res.message);
+        event.target.reset();  // Clear the form after submission
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('Failed to submit the form. Please check your network connection and try again.');
     }
   };
 
@@ -48,7 +80,7 @@ const Contact = () => {
           }
         });
       },
-      { threshold: 0.3 } // Trigger when 10% of the section is in view
+      { threshold: 0.3 } // Trigger when 30% of the section is in view
     );
 
     if (section) {
@@ -95,7 +127,7 @@ const Contact = () => {
           <input type="email"  placeholder='Enter your email' name='email'/>
           <label htmlFor="">Write your message here</label>
           <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
-          <button type='submit' className="contact-submit">Submit now</button>
+          <button type='submit' className="contact-submit">Send Now</button>
         </form>
       </div>
     </div>
