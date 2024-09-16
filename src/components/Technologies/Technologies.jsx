@@ -9,6 +9,7 @@ import css from '../../assets/css.svg';
 import html from '../../assets/html.svg';
 import nodejs from '../../assets/nodejs.svg';
 import javascript from '../../assets/javascript.svg';
+import nextjs from '../../assets/nextjs.svg';
 
 const Technologies = () => {
     const sectionRef = useRef(null);
@@ -47,6 +48,12 @@ const Technologies = () => {
       <br />
 
       <div className="technologies-icons-container">
+      <div className="icon-wrapper">
+          <img src={html} alt="HTML" className="icon" />
+        </div>
+        <div className="icon-wrapper">
+          <img src={css} alt="CSS" className="icon" />
+        </div>
         <div className="icon-wrapper">
           <img src={react_icon} alt="React" className="icon" />
         </div>
@@ -56,17 +63,15 @@ const Technologies = () => {
         <div className="icon-wrapper">
           <img src={mysql} alt="MySQL" className="icon" />
         </div>
-        <div className="icon-wrapper">
-          <img src={html} alt="HTML" className="icon" />
-        </div>
-        <div className="icon-wrapper">
-          <img src={css} alt="CSS" className="icon" />
-        </div>
+        
         <div className="icon-wrapper">
           <img src={nodejs} alt="Node.js" className="icon" />
         </div>
         <div className="icon-wrapper">
           <img src={javascript} alt="JavaScript" className="icon" />
+        </div>
+        <div className="icon-wrapper">
+          <img src={nextjs} alt="nextjs" className="icon" />
         </div>
       </div>
     </div>
