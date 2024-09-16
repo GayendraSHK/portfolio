@@ -85,6 +85,55 @@
     align-items: center;
     gap: 20px;
   }
+
+  .social-links-container {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .social-links-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff; /* Adjust to match the "Find me in" title color in the image */
+    margin-bottom: 15px;
+  }
+  
+  .social-icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .bannerIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;  /* Width of the icon container */
+    height: 60px; /* Height of the icon container */
+    background-color: #000000; /* Dark background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow for the 3D effect */
+    transition: transform 0.3s, background-color 0.3s; /* Transition for hover effect */
+  }
+  
+  .bannerIcon svg {
+    width: 26px; /* Size of the social icon */
+    height: 26px;
+    color: #ffffff; /* White icon color */
+  }
+  
+  .bannerIcon:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    background-color: #ff0055; /* Change background color for hover */
+  }
+  
+  .bannerIcon:nth-child(1):hover {
+    background-color: #333; /* Different hover effect for GitHub */
+  }
+  
+  .bannerIcon:nth-child(2):hover {
+    background-color: #0077b5; /* LinkedIn blue color */
+  }
   
   .contact-right {
     display: flex;
