@@ -6,6 +6,7 @@ import theme_pattern from '../../assets/theme_pattern.svg';
 import mail_icon from '../../assets/mail_icon.svg';
 import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
   const sectionRef = useRef(null);
@@ -119,6 +120,21 @@ const Contact = () => {
               <p>Matara, Sri Lanka</p>
             </div>
           </div>
+
+          <div className="social-links-container">
+            <h2 className="social-links-title">
+              Find me in
+            </h2>
+            <div className="social-icons-container">
+              <a href="https://github.com/GayendraSHK" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/kaveesha-gayendra" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+                <FaLinkedinIn />
+              </a>
+            </div>
+          </div>
+
         </div>
         <form onSubmit={onSubmit} className='contact-right'>
           <label htmlFor="">Your Name</label>

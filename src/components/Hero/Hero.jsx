@@ -5,6 +5,7 @@ import './Hero.css';
 import profile_img from '../../assets/profile_img2.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Typed from 'typed.js'; // Import the 'Typed' library
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Hero = () => {
   const typedRef = useRef(null);
@@ -66,6 +67,21 @@ const Hero = () => {
         </div>
         <div className="hero-resume">My Resume</div>
       </div>
+
+      <div className="social-links-container">
+        <h2 className="social-links-title">
+          Find me in
+        </h2>
+        <div className="social-icons-container">
+          <a href="https://github.com/GayendraSHK" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/kaveesha-gayendra" target="_blank" rel="noopener noreferrer" className="bannerIcon">
+            <FaLinkedinIn />
+          </a>
+        </div>
+      </div>
+
     </div>
   );
 }
