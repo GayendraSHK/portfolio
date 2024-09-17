@@ -60,7 +60,7 @@ const Hero = () => {
   return (
     <div ref={heroRef} id='home' className='hero'>
       <img src={profile_img} alt="" />
-      <span>I'm Kaveesha Gayendra,</span>
+      <span>I'm Kaveesha Gayendra, </span>
       <h1 ref={typedRef}></h1>
       <div className="hero-action">
         <div className="hero-connect">
