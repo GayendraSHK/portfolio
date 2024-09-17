@@ -35,6 +35,11 @@ const Navbar = () => {
               <p onClick={()=>setMenu("about")}>About Me</p>
             </AnchorLink>
           </li>
+          {/* <li className={menu === "education" ? 'selected' : ''}>
+            <AnchorLink className='anchor-link' offset={50} href='#education'>
+              <p onClick={()=>setMenu("education")}>Education</p>
+            </AnchorLink>
+          </li> */}
           <li className={menu === "technologies" ? 'selected' : ''}>
             <AnchorLink className='anchor-link' offset={50} href='#technologies'>
               <p onClick={()=>setMenu("technologies")}>Technologies</p>

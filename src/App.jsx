@@ -6,6 +6,7 @@ import Hero from './components/Hero/Hero'
 import Technologies from './components/Technologies/Technologies'
 import Navbar from './components/Navbar/Navbar'
 import Projects from './components/Projects/Projects'
+//import EducationTimeline from './components/EducationTimeline/EducationTimeline'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar/>
       <Hero/>
       <About/>
+      {/* <EducationTimeline/> */}
       <Technologies/>
       <Projects/>
       <Contact/>
