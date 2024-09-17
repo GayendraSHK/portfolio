@@ -87,13 +87,25 @@
     border: 2px solid #FFF;
     cursor: pointer;
   }
+
+  .hero-resume a {
+    text-decoration: none;  /* Remove underline */
+    color: #FFFFFF;         /* Adjust color */
+    font-size: 16px;        /* Font size */
+    font-weight: 500;       /* Font weight */
+    display: block;         /* Block to fill the button area */
+  }
   
   .hero-connect:hover {
     border: 2px solid white;
   }
   
   .hero-resume:hover {
-    border-color: #B415FF;
+    border-color: #00C9FF;
+  }
+
+  .hero-resume a:hover {
+    color: #00C9FF;         /* Change text color on hover */
   }
 
   .social-links-container {

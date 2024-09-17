@@ -54,6 +54,9 @@ const Hero = () => {
     };
   }, []);
 
+  // Access the resume URL from the environment variable
+  const resumeUrl = "https://drive.google.com/file/d/1VizOX8qWW_I_XwX5EbwiZmjQtKUPcHiY/view?usp=sharing";
+
   return (
     <div ref={heroRef} id='home' className='hero'>
       <img src={profile_img} alt="" />
@@ -65,7 +68,12 @@ const Hero = () => {
             Connect With Me
           </AnchorLink>
         </div>
-        <div className="hero-resume">My Resume</div>
+        <div className="hero-resume">
+          {/* Use the resume URL from the environment variable */}
+          <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+            My Resume
+          </a>
+        </div>
       </div>
 
       <div className="social-links-container">
