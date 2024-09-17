@@ -1,0 +1,115 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px); /* Start with a downward offset */
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Timeline Container */
+  .education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Initial downward offset */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition */
+  }
+  
+  .education.animate-education {
+    animation: fadeIn 2s ease-in-out;
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Reset transform */
+  }
+  
+  .timeline-title {
+    position: relative;
+    top: 30px;
+  }
+  
+  .timeline-title h1 {
+    padding: 0 30px;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  
+  .timeline-title img {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    z-index: -1;
+  }
+  
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
+    padding: 0.3rem;
+    position: relative;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    background: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .timeline-item.left {
+    left: -55%;
+  }
+  
+  .timeline-item.right {
+    left: 55%;
+  }
+  
+  .timeline-item.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .timeline-item.show {
+    animation: fadeIn 0.6s forwards;
+  }
+  
+  /* Content */
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .timeline-year {
+    font-size: 1.5rem;
+    color: #007BFF;
+    font-weight: bold;
+  }
+  
+  .timeline-heading {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .timeline-institution {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+    }
+  }
+  
