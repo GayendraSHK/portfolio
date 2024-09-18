@@ -1,187 +1,200 @@
+/* Styling for the navbar container */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 170px;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: calc(100% - 340px);
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease-in-out;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items horizontally */
+    margin: 0 170px; /* Horizontal margin for spacing */
+    padding: 10px; /* Padding around the navbar */
+    position: fixed; /* Fix the navbar to the top of the page */
+    top: 0; /* Align at the top */
+    width: calc(100% - 340px); /* Full width minus horizontal margins */
+    z-index: 100; /* Ensure navbar is above other content */
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border-radius: 12px; /* Rounded corners */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Bottom border for separation */
+    transition: all 0.3s ease-in-out; /* Smooth transition for any changes */
 }
 
+/* Styling for the logo image */
 .nav-logo {
-    width: 120px;
-    height: auto;
+    width: 120px; /* Set the width of the logo */
+    height: auto; /* Maintain aspect ratio */
 }
 
+/* Styling for the navigation menu */
 .nav-menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 17px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    list-style: none; /* Remove default list styling */
+    gap: 60px; /* Space between menu items */
+    font-size: 17px; /* Font size for menu items */
 }
 
+/* Styling for the connect button */
 .nav-connect {
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #24c6dc 0.36%, #514a9d 102.06%);
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    padding: 20px 40px; /* Padding around the button */
+    border-radius: 50px; /* Rounded corners */
+    background: linear-gradient(267deg, #24c6dc 0.36%, #514a9d 102.06%); /* Gradient background */
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
 }
 
+/* Hover effect for the connect button */
 .nav-connect:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
+/* Styling for each menu list item */
 .nav-menu li {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    gap: 5px; /* Space between menu text and underline */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Styling for anchor links in the menu */
 .anchor-link {
-    text-decoration: none;
-    color: white;
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set text color */
 }
 
+/* Icons for mobile menu toggle - hidden by default */
 .nav-mob-close, .nav-mob-open {
-    display: none;
+    display: none; /* Hide icons by default */
 }
 
+/* Styling for menu item text with underline effect */
 .nav-menu li p {
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
+    position: relative; /* Position relative for pseudo-element positioning */
+    padding-bottom: 5px; /* Space below text for underline */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
+/* Underline effect for menu item text */
 .nav-menu li p::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
-    left: 0;
-    background-color: #24c6dc;
-    transition: width 0.3s ease;
+    content: ''; /* No content, just a visual effect */
+    position: absolute; /* Position absolutely within the parent */
+    width: 0; /* Initial width of the underline */
+    height: 3px; /* Thickness of the underline */
+    bottom: 0; /* Position at the bottom of the text */
+    left: 0; /* Align to the left */
+    background-color: #24c6dc; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for underline width */
 }
 
+/* Expand underline effect on hover */
 .nav-menu li:hover p::after {
-    width: 100%;
+    width: 100%; /* Expand underline to full width */
 }
 
+/* Styling for the selected menu item */
 .selected p {
-    color: #24c6dc;
+    color: #24c6dc; /* Change text color for selected item */
 }
 
+/* Ensure underline is fully expanded for the selected item */
 .selected p::after {
-    width: 100%;
-    background-color: #24c6dc;
+    width: 100%; /* Full width underline */
+    background-color: #24c6dc; /* Color of the underline */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tablets (1024px and below) */
 @media (max-width: 1024px) {
     .navbar {
-        margin: 0;
-        padding: 15px 30px;
-        width: calc(100% - 60px);
+        margin: 0; /* Remove horizontal margin */
+        padding: 15px 30px; /* Adjust padding */
+        width: calc(100% - 60px); /* Adjust width to account for reduced margin */
     }
 
     .nav-logo {
-        width: 100px;
+        width: 100px; /* Smaller logo for tablets */
     }
 
     .nav-menu {
-        gap: 40px;
-        font-size: 16px;
+        gap: 40px; /* Reduce gap between menu items */
+        font-size: 16px; /* Adjust font size */
     }
 
     .nav-connect {
-        font-size: 14px;
-        padding: 15px 30px;
+        font-size: 14px; /* Smaller font size for the connect button */
+        padding: 15px 30px; /* Adjust padding */
     }
 }
 
+/* Responsive adjustments for mobile devices (768px and below) */
 @media (max-width: 768px) {
     .navbar {
         padding: 20px 10px; /* Adjusted padding for mobile */
-        width: 100%;
-        margin: 0;
+        width: 100%; /* Full width for mobile */
+        margin: 0; /* Remove horizontal margin */
     }
 
     .nav-connect {
-        display: none;
+        display: none; /* Hide the connect button on mobile */
     }
 
     .nav-mob-open {
-        display: block;
-        position: fixed;
-        top: 15px;
-        right: 30px; /* Adjusted position for better visibility */
-        width: 30px;
-        height: auto;
-        cursor: pointer;
+        display: block; /* Show menu open icon */
+        position: fixed; /* Fix position to top right */
+        top: 15px; /* Position from the top */
+        right: 30px; /* Position from the right */
+        width: 30px; /* Width of the icon */
+        height: auto; /* Maintain aspect ratio */
+        cursor: pointer; /* Pointer cursor on hover */
     }
 
     .nav-mob-close {
-        display: block;
-        position: relative;
-        top: 20px;
+        display: block; /* Show menu close icon */
+        position: relative; /* Relative positioning within menu */
+        top: 20px; /* Position from the top */
         right: -140px; /* Adjusted position for better visibility */
-        width: 25px;
-        height: auto;
-        cursor: pointer;
+        width: 25px; /* Width of the icon */
+        height: auto; /* Maintain aspect ratio */
+        cursor: pointer; /* Pointer cursor on hover */
     }
 
     .nav-menu {
-        position: fixed;
-        flex-direction: column;
-        align-items: flex-start;
-        top: 0;
-        gap: 30px;
-        background-color: rgba(31, 0, 22, 0.9) !important; /* Ensure background color is applied */
-        width: 250px; /* Adjusted width */
-        height: 100%;
-        z-index: 2;
-        transition: right 0.5s;
-        right: -250px; /* Adjusted to match the width */
-        color: white; /* Ensure text color for better contrast */
+        position: fixed; /* Fix position to the top left */
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align items to the start */
+        top: 0; /* Position at the top */
+        gap: 30px; /* Space between menu items */
+        background-color: rgba(31, 0, 22, 0.9) !important; /* Dark background for contrast */
+        width: 250px; /* Fixed width for mobile menu */
+        height: 100%; /* Full height */
+        z-index: 2; /* Ensure menu is above other content */
+        transition: right 0.5s; /* Smooth transition for sliding in/out */
+        right: -250px; /* Initial position off-screen */
+        color: white; /* Text color */
     }
 
     .nav-menu li {
-        font-size: 24px;
-        padding-left: 30px; /* Adjusted padding */
-        flex-direction: row;
-        gap: 20px;
+        font-size: 24px; /* Larger font size for mobile */
+        padding-left: 30px; /* Padding for menu items */
+        flex-direction: row; /* Arrange items horizontally */
+        gap: 20px; /* Space between icon and text */
     }
 
     .nav-menu li p {
-        font-size: 20px;
+        font-size: 20px; /* Font size for menu item text */
     }
 }
 
+/* Responsive adjustments for very small screens (480px and below) */
 @media (max-width: 480px) {
     .nav-logo {
-        width: 80px;
+        width: 80px; /* Smaller logo for very small screens */
     }
 
     .nav-menu {
-        width: 200px; /* Adjusted for very small screens */
-        //background-color: #fff; /* Ensure background color is applied */
-        color: white; /* Ensure text color for better contrast */
-        //background: linear-gradient(267deg, #24c6dc 0.36%, #514a9d 102.06%);
+        width: 200px; /* Adjusted width for very small screens */
+        color: white; /* Ensure text color */
     }
 
     .nav-menu li {
-        font-size: 20px;
+        font-size: 20px; /* Font size for very small screens */
         padding-left: 20px; /* Adjusted padding */
     }
 }

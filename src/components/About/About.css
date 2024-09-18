@@ -1,120 +1,128 @@
 @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    /* Initial state of the animation: fully transparent and translated 20px down */
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
+  100% {
+    /* Final state of the animation: fully visible and translated back to the original position */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items horizontally */
+  justify-content: center; /* Center align items vertically */
+  gap: 80px; /* Space between elements */
+  margin: 80px 170px; /* Outer spacing for the 'about' section */
+  opacity: 0; /* Start with hidden state for fade-in effect */
+  transform: translateY(20px); /* Initial translation downwards */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition for opacity and position */
+}
+
+.about.animate {
+  /* Trigger animation once the element is in view */
+  animation: fadeInUp 2s ease-in-out;
+  opacity: 1; /* Set opacity to visible */
+  transform: translateY(0); /* Reset the translation */
+}
+
+.about-title {
+  position: relative; /* Allows for absolute positioning of child elements */
+  top: 30px; /* Adjusts the vertical positioning */
+}
+
+.about-title h1 {
+  padding: 0px 30px; /* Adds horizontal padding around the title */
+  font-size: 60px; /* Sets a large font size for the main title */
+  font-weight: 600; /* Sets the weight for a bold appearance */
+}
+
+.about-title img {
+  position: absolute; /* Absolute positioning to allow the image to be placed within the title container */
+  bottom: 0; /* Align the image to the bottom */
+  right: 0; /* Align the image to the right */
+  z-index: -1; /* Send the image behind the title using z-index */
+}
+
+.about-section {
+  display: flex; /* Set items side by side (two-column layout) */
+  align-items: flex-start; /* Aligns the items at the start of the section vertically */
+  gap: 80px; /* Space between the columns */
+  width: 100%; /* Full-width for the section */
+}
+
+.about-left {
+  flex: 1; /* Takes 1 part of the available space */
+  display: flex; /* Flexbox for aligning the image */
+  justify-content: center; /* Centers the profile image horizontally */
+}
+
+.about-left img {
+  width: 300px; /* Sets the width of the profile image */
+  height: auto; /* Adjusts the height to maintain aspect ratio */
+  border-radius: 15px; /* Rounds the corners of the profile image */
+}
+
+.about-right {
+  flex: 2; /* Takes 2 parts of the available space (larger content area) */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 80px; /* Space between the paragraphs/content */
+}
+
+.about-para {
+  display: flex;
+  flex-direction: column; /* Stack paragraphs in a column */
+  gap: 20px; /* Space between individual paragraphs */
+  font-size: 20px; /* Sets font size for the content text */
+  font-weight: 500; /* Sets medium font weight */
+}
+
+.about-para p {
+  text-align: justify; /* Aligns text for even spacing on both sides */
+}
+
+/* Media query for devices with a max width of 768px (mobile view) */
+@media(max-width: 768px) {
   .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-    opacity: 0; /* Start with hidden state */
-    transform: translateY(20px); /* Initial transform */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Transition effects */
-  }
-  
-  .about.animate {
-    animation: fadeInUp 2s ease-in-out;
-    opacity: 1; /* Show section */
-    transform: translateY(0); /* Reset transform */
-  }
-  
-  .about-title {
-    position: relative;
-    top: 30px;
-  }
-  
-  .about-title h1 {
-    padding: 0px 30px;
-    font-size: 60px;
-    font-weight: 600;
-  }
-  
-  .about-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-  
-  .about-section {
-    display: flex;
-    align-items: flex-start; /* Align items at the start of the section */
-    gap: 80px;
-    width: 100%;
-  }
-  
-  .about-left {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Align to the start (left) */
-  }
-  
-  .about-left img {
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-  }
-  
-  .about-right {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-  }
-  
-  .about-para {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: 500;
+    gap: 80px; /* Maintains gap between elements */
+    margin: 50px 20px; /* Adjust margin for smaller screens */
   }
 
-  .about-para p {
-    text-align: justify;
+  .about-title h1 {
+    font-size: 40px; /* Reduce the font size for the title on smaller screens */
+    padding: 0; /* Remove extra padding */
   }
-  
-  @media(max-width: 768px) {
-    .about {
-      gap: 80px;
-      margin: 50px 20px;
-      //align-items: start;
-    }
-    .about-title h1 {
-      font-size: 40px;
-      padding: 0;
-    }
-    .about-title img {
-      width: 100px;
-      right: -10px;
-    }
-    .about-section {
-      flex-direction: column;
-      align-items: center;
-    }
-    .about-left {
-      display: flex;
-      justify-content: center;
-    }
-    .about-left img {
-      width: 180px; /* Adjusted size for smaller screens */
-      height: auto;
-    }
-    .about-right {
-      width: 100%;
-    }
-    .about-para {
-      font-size: 18px;
-      line-height: 32px;
-    }
+
+  .about-title img {
+    width: 100px; /* Reduce the size of the theme pattern image */
+    right: -10px; /* Adjust the positioning for the smaller screen */
   }
-  
+
+  .about-section {
+    flex-direction: column; /* Stack the profile and text vertically */
+    align-items: center; /* Center-align both columns */
+  }
+
+  .about-left {
+    justify-content: center; /* Keep the profile image centered */
+  }
+
+  .about-left img {
+    width: 180px; /* Smaller profile image for mobile view */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .about-right {
+    width: 100%; /* Make the text content full width */
+  }
+
+  .about-para {
+    font-size: 18px; /* Adjust font size for mobile */
+    line-height: 32px; /* Adjust line height for readability on small screens */
+  }
+}

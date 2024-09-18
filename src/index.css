@@ -1,11 +1,13 @@
-*{
-  margin: 0;
-  padding: 0;
+/* Resetting margin and padding for all elements to ensure consistency across browsers */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-body{
-  height: 100vh;
-  background: #000033;
-  color: white;
-  font-family: 'outfit';
+/* Styling for the body element */
+body {
+  height: 100vh; /* Set the height of the body to 100% of the viewport height */
+  background: #000033; /* Dark blue background color for the entire page */
+  color: white; /* Set the text color to white for better contrast against the dark background */
+  font-family: 'outfit'; /* Apply the 'outfit' font family to the entire page */
 }
