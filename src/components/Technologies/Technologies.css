@@ -1,129 +1,138 @@
+/* Animation for fading in and moving up */
 @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+      opacity: 0; /* Start fully transparent */
+      transform: translateY(20px); /* Start with a downward offset */
   }
-  
-  .technologies {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 60px; /* Reduced gap for smaller screens */
-    margin: 60px 120px; /* Adjusted margin */
-    opacity: 0; /* Start with hidden state */
-    transform: translateY(20px); /* Initial transform */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Transition effects */
+  100% {
+      opacity: 1; /* End fully opaque */
+      transform: translateY(0); /* End at original position */
   }
-  
-  .technologies.animate {
-    animation: fadeInUp 2s ease-in-out;
-    opacity: 1; /* Show section */
-    transform: translateY(0); /* Reset transform */
-  }
-  
-  .technologies-title {
-    position: relative;
-    top: 30px;
-  }
-  
-  .technologies-title h1 {
-    padding: 0 30px;
-    font-size: 50px; /* Adjusted font size */
-    font-weight: 600;
-  }
-  
-  .technologies-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-  }
-  
-  .technologies-icons-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 icons per row for larger screens */
-    gap: 2.5rem; /* Reduced gap between icons */
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .icon-wrapper {
-    border-radius: 1rem;
-    border: 3px solid #514a9d;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .icon-wrapper:hover {
-    transform: scale(1.2);
-  }
-  
-  .icon {
-    width: 4.5rem;
-    height: 4.5rem;
-    object-fit: contain;
-  }
-  
-  /* Tablet responsiveness */
-  @media(max-width: 768px) {
-    .technologies {
-      margin: 80px 20px;
-    }
-  
-    .technologies-title h1 {
-      font-size: 40px;
-      padding: 0;
-    }
+}
 
-    .technologies-title img {
-      width: 100px;
-      right: -10px;
-    }
-  
-    .technologies-icons-container {
-      grid-template-columns: repeat(3, 1fr); /* 2 icons per row */
-      gap: 1.5rem;
-    }
-  
-    .icon-wrapper {
-      padding: 0.8rem;
-    }
-  
-    .icon {
-      width: 3.5rem;
-      height: 3.5rem; /* Reduced icon size */
-    }
+/* Main container for the technologies section */
+.technologies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* Space between items, adjusted for smaller screens */
+  margin: 60px 120px; /* Margin around the container */
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initial downward offset */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition for opacity and transform */
+}
+
+/* Class applied when the section is in view to trigger animation */
+.technologies.animate {
+  animation: fadeInUp 2s ease-in-out; /* Apply fadeInUp animation */
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Reset transform */
+}
+
+/* Title styling for the technologies section */
+.technologies-title {
+  position: relative;
+  top: 30px; /* Position the title slightly down */
+}
+
+/* Styling for the title text */
+.technologies-title h1 {
+  padding: 0 30px; /* Horizontal padding around the title */
+  font-size: 50px; /* Font size for larger screens */
+  font-weight: 600; /* Semi-bold font weight */
+}
+
+/* Background pattern image positioning */
+.technologies-title img {
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the title container */
+  right: 0; /* Position at the right edge */
+  z-index: -1; /* Place behind other content */
+}
+
+/* Container for technology icons, using a grid layout */
+.technologies-icons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 icons per row for larger screens */
+  gap: 2.5rem; /* Space between icons */
+  align-items: center; /* Center items vertically */
+  justify-items: center; /* Center items horizontally */
+}
+
+/* Wrapper for each technology icon */
+.icon-wrapper {
+  border-radius: 1rem; /* Rounded corners */
+  border: 3px solid #514a9d; /* Border color */
+  padding: 1rem; /* Padding around the icon */
+  transition: transform 0.3s ease; /* Smooth transform effect on hover */
+}
+
+/* Hover effect for icon wrapper */
+.icon-wrapper:hover {
+  transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+/* Styling for individual icons */
+.icon {
+  width: 4.5rem; /* Width of the icon */
+  height: 4.5rem; /* Height of the icon */
+  object-fit: contain; /* Maintain aspect ratio and fit within container */
+}
+
+/* Tablet responsiveness */
+@media(max-width: 768px) {
+  .technologies {
+      margin: 80px 20px; /* Adjust margin for tablets */
   }
-  
-  /* Mobile responsiveness */
-  @media(max-width: 480px) {
-    .technologies {
-      margin: 80px 20px;
-      gap: 40px;
-    }
-  
-    .technologies-title h1 {
-      font-size: 40px; /* Smaller title for mobile */
-    }
-  
-    .technologies-icons-container {
-      grid-template-columns: repeat(1, 1fr); /* 1 icon per row */
-      gap: 1rem;
-    }
-  
-    .icon-wrapper {
-      padding: 0.6rem;
-    }
-  
-    .icon {
-      width: 3rem;
-      height: 3rem; /* Smaller icons for mobile */
-    }
+
+  .technologies-title h1 {
+      font-size: 40px; /* Smaller font size for tablets */
+      padding: 0; /* Remove horizontal padding */
   }
-  
+
+  .technologies-title img {
+      width: 100px; /* Adjust width for tablet view */
+      right: -10px; /* Position adjustment */
+  }
+
+  .technologies-icons-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 icons per row for tablets */
+      gap: 1.5rem; /* Reduced gap between icons */
+  }
+
+  .icon-wrapper {
+      padding: 0.8rem; /* Reduced padding */
+  }
+
+  .icon {
+      width: 3.5rem; /* Smaller icon size */
+      height: 3.5rem; /* Smaller icon size */
+  }
+}
+
+/* Mobile responsiveness */
+@media(max-width: 480px) {
+  .technologies {
+      margin: 80px 20px; /* Adjust margin for mobile */
+      gap: 40px; /* Reduced gap between items */
+  }
+
+  .technologies-title h1 {
+      font-size: 40px; /* Smaller font size for mobile */
+  }
+
+  .technologies-icons-container {
+      grid-template-columns: repeat(1, 1fr); /* 1 icon per row for mobile */
+      gap: 1rem; /* Reduced gap between icons */
+  }
+
+  .icon-wrapper {
+      padding: 0.6rem; /* Reduced padding */
+  }
+
+  .icon {
+      width: 3rem; /* Smaller icon size */
+      height: 3rem; /* Smaller icon size */
+  }
+}

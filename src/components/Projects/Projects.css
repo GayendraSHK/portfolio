@@ -1,220 +1,239 @@
+/* Keyframes for fade-in animation */
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px); /* Start with a downward offset */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(20px); /* Start with a downward offset */
   }
-  
+  100% {
+    opacity: 1; /* End fully opaque */
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Main container for projects section */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px; /* Space between elements */
+  margin: 80px 170px; /* Margin around the section */
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Initial downward offset */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition for opacity and transform */
+}
+
+/* Apply animation when 'animate-projects' class is added */
+.projects.animate-projects {
+  animation: fadeIn 2s ease-in-out; /* Apply fadeIn animation */
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Reset transform */
+}
+
+/* Title container for projects */
+.projects-title {
+  position: relative;
+  top: 30px; /* Offset title from top */
+}
+
+/* Title styling */
+.projects-title h1 {
+  padding: 0 30px; /* Horizontal padding */
+  font-size: 60px; /* Font size for title */
+  font-weight: 600; /* Font weight */
+}
+
+/* Background image for title */
+.projects-title img {
+  position: absolute;
+  bottom: 0; /* Align to bottom */
+  right: 0; /* Align to right */
+  z-index: -1; /* Place behind other content */
+}
+
+/* Container for project items */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns layout for larger screens */
+  gap: 30px; /* Space between items */
+}
+
+/* Individual project item styling */
+.project-item {
+  position: relative;
+  overflow: hidden; /* Hide overflow for image */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Project image styling */
+.project-item img {
+  width: 350px; /* Fixed width */
+  height: auto; /* Auto height to maintain aspect ratio */
+  transition: 0.3s; /* Smooth transition for transform and border */
+  border: 4px solid #fff; /* White border around image */
+}
+
+/* Overlay with project name */
+.project-name-overlay {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to be centered */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding around text */
+  text-align: center; /* Center text */
+  font-size: 20px; /* Font size */
+  font-weight: bold; /* Font weight */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s ease; /* Smooth transition for background color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effects for project image */
+.project-item:hover img {
+  transform: scale(1.10); /* Scale up image */
+  border: 4px solid #ff00ff; /* Change border color on hover */
+  border-radius: 10px; /* Adjust border radius on hover */
+}
+
+/* Hover effects for project name overlay */
+.project-item:hover .project-name-overlay {
+  background: rgba(0, 0, 0, 0.9); /* Darken background on hover */
+}
+
+/* Button to show more projects */
+.projects-showmore {
+  display: flex;
+  gap: 15px; /* Space between elements */
+  border-radius: 50px; /* Rounded corners */
+  border: 2px solid white; /* White border */
+  padding: 30px 60px; /* Padding around button */
+  font-size: 20px; /* Font size */
+  font-weight: 500; /* Font weight */
+  margin-bottom: 80px; /* Margin below button */
+  transition: 0.6s; /* Smooth transition for hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effects for 'show more' button */
+.projects-showmore:hover {
+  gap: 30px; /* Increase gap on hover */
+}
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 10; /* Slightly offset from left */
+  width: 80vw; /* Width of 80% of viewport width */
+  height: 130vh; /* Height of 130% of viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  z-index: 999; /* Ensure it’s on top */
+}
+
+/* Modal content styling */
+.modal-content {
+  padding: 30px; /* Padding around content */
+  border-radius: 10px; /* Rounded corners */
+  width: 500px; /* Fixed width */
+  max-width: 90%; /* Responsive width */
+  background: linear-gradient(264deg, #24c6dc -5.09%, #514a9d 106.28%); /* Gradient background */
+}
+
+/* Modal heading styling */
+.modal-content h2 {
+  margin-top: 0; /* Remove top margin */
+}
+
+/* Unordered list styling in modal */
+.modal-content ul {
+  list-style-type: none; /* Remove list bullets */
+  padding: 0; /* Remove padding */
+}
+
+/* List item styling in modal */
+.modal-content ul li {
+  margin: 5px 0; /* Margin around list items */
+}
+
+/* Button in modal styling */
+.modal-content button {
+  padding: 10px 20px; /* Padding around button */
+  background-color: #000033; /* Dark background color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 20px; /* Margin on top */
+  display: block; /* Block display */
+  margin: 20px auto; /* Center horizontally */
+}
+
+/* Hover effects for modal button */
+.modal-content button:hover {
+  background-color: #000000; /* Darken background on hover */
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
   .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Initial downward offset */
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition */
+    gap: 50px; /* Adjust gap */
+    margin: 50px 70px; /* Adjust margins */
   }
-  
-  .projects.animate-projects {
-    animation: fadeIn 2s ease-in-out;
-    opacity: 1; /* Make visible */
-    transform: translateY(0); /* Reset transform */
-  }
-  
-  .projects-title {
-    position: relative;
-    top: 30px;
-  }
-  
+
   .projects-title h1 {
-    padding: 0 30px;
-    font-size: 60px;
-    font-weight: 600;
+    font-size: 40px; /* Smaller font size */
+    padding: 0; /* Remove padding */
   }
-  
+
   .projects-title img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
+    width: 100px; /* Smaller background image */
+    right: -10px; /* Adjust position */
   }
-  
+
   .projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+    gap: 30px; /* Adjust gap */
   }
-  
-  .project-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-  
+
   .project-item img {
-    width: 350px;
-    height: auto;
-    transition: 0.3s;
-    border: 4px solid #fff;
+    width: 280px; /* Smaller image width */
+    height: auto; /* Maintain aspect ratio */
   }
-  
-  .project-name-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .project-item:hover img {
-    transform: scale(1.10);
-    border: 4px solid #ff00ff;
-    border-radius: 10px;
-  }
-  
-  .project-item:hover .project-name-overlay {
-    background: rgba(0, 0, 0, 0.9);
-  }
-  
-  /* Show more button */
+
   .projects-showmore {
-    display: flex;
-    gap: 15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
-    cursor: pointer;
+    padding: 20px 40px; /* Adjust padding */
+    font-size: 18px; /* Smaller font size */
+    margin: 50px auto; /* Center horizontally */
   }
-  
-  .projects-showmore:hover {
-    gap: 30px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .projects {
+    gap: 40px; /* Adjust gap */
+    margin: 30px 20px; /* Adjust margins */
   }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 10;
-    width: 80vw;
-    height: 130vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
+
+  .projects-title h1 {
+    font-size: 40px; /* Font size for mobile */
   }
-  
-  .modal-content {
-    padding: 30px;
-    border-radius: 10px;
-    width: 500px;
-    max-width: 90%;
-    background: linear-gradient(264deg, #24c6dc -5.09%, #514a9d 106.28%);
+
+  .projects-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Adjust gap */
   }
-  
-  .modal-content h2 {
-    margin-top: 0;
+
+  .project-item img {
+    width: 250px; /* Smaller image width */
   }
-  
-  .modal-content ul {
-    list-style-type: none;
-    padding: 0;
+
+  .projects-showmore {
+    padding: 15px 30px; /* Adjust padding */
+    font-size: 16px; /* Smaller font size */
+    margin: 30px auto; /* Center horizontally */
   }
-  
-  .modal-content ul li {
-    margin: 5px 0;
-  }
-  
-  .modal-content button {
-    padding: 10px 20px;
-    background-color: #000033;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: block;
-    margin: 20px auto;
-  }
-  
-  .modal-content button:hover {
-    background-color: #000000;
-  }
-  
-  /* Tablet responsiveness */
-  @media (max-width: 768px) {
-    .projects {
-      gap: 50px;
-      margin: 50px 70px;
-    }
-  
-    .projects-title h1 {
-      font-size: 40px;
-      padding: 0;
-    }
-  
-    .projects-title img {
-      width: 100px;
-      right: -10px;
-    }
-  
-    .projects-container {
-      grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
-      gap: 30px;
-    }
-  
-    .project-item img {
-      width: 280px;
-      height: auto;
-    }
-  
-    .projects-showmore {
-      padding: 20px 40px;
-      font-size: 18px;
-      margin: 50px auto;
-    }
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 480px) {
-    .projects {
-      gap: 40px;
-      margin: 30px 20px;
-    }
-  
-    .projects-title h1 {
-      font-size: 40px;
-    }
-  
-    .projects-container {
-      grid-template-columns: 1fr; /* 1 column on mobile */
-      gap: 20px;
-    }
-  
-    .project-item img {
-      width: 250px;
-    }
-  
-    .projects-showmore {
-      padding: 15px 30px;
-      font-size: 16px;
-      margin: 30px auto;
-    }
-  }
-  
+}

@@ -1,32 +1,14 @@
-//import React from 'react'
-import './Footer.css'
-// import footer_logo from '../../assets/footer_logo.svg'
-// import user_icon from '../../assets/user_icon.svg'
+/* eslint-disable no-unused-vars */ 
+// Disables the rule for unused variables to avoid ESLint warnings (for example, React in some cases)
+import React from 'react'
+import './Footer.css' // Importing the CSS file for styling the Footer component
 
 const Footer = () => {
   return (
-    <div className='footer'>
-        {/* <div className="footer-top">
-            <div className="footer-top-left">
-                <img src={footer_logo} alt="" />
-                <p>I am a frontend developer from, USA with 10 years of experience in companies like Microsoft, Tesla and Apple.</p>
-            </div>
-            <div className="footer-top-right">
-                <div className="footer-email-input">
-                    <img src={user_icon} alt="" />
-                    <input type="email" placeholder='Enter your email' />
-                </div>
-                <div className="footer-subscribe">Subscribe</div>
-            </div>
-        </div> */}
-        <hr />
-        <div className="footer-bottom">
-            <p className="footer-bottom-left">© 2024 Kaveesha Gayendra. All rights reserved.</p>
-            <div className="footer-bottom-right">
-                <p>Terms of Services</p>
-                <p>Privacy Policy</p>
-                <p>Connect with me</p>
-            </div>
+    <div className='footer'> {/* Main container for the footer */}
+        <hr /> {/* Horizontal line to visually separate the footer */}
+        <div className="footer-bottom"> {/* Container for the footer content */}
+            <p className="footer-bottom-left">© 2024 Kaveesha Gayendra. All rights reserved.</p> {/* Footer text with copyright notice */}
         </div>
     </div>
   )

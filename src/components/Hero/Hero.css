@@ -1,235 +1,269 @@
+/* Animation for fading in the hero section */
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Start slightly above the viewport */
   }
-  
-  .hero {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Back to original position */
   }
-  
-  .hero h1 {
-    min-height: 1.7em;
-    display: inline-block;
-    margin: 0;
-  }
-  
-  .hero.animate-hero {
-    animation: fadeIn 2s ease-in-out;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+}
+
+/* Main hero section container */
+.hero {
+  display: flex; /* Flexbox layout for aligning items */
+  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Arrange items in a column */
+  gap: 35px; /* Space between child elements */
+  opacity: 0; /* Initially invisible */
+  transform: translateY(-20px); /* Slightly above its position */
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Smooth transition on visibility and position */
+}
+
+/* Hero title styling */
+.hero h1 {
+  min-height: 1.7em; /* Minimum height to maintain spacing */
+  display: inline-block; /* Ensure the element respects inline formatting */
+  margin: 0; /* Remove default margin */
+}
+
+/* When the hero section is visible, apply the fade-in animation */
+.hero.animate-hero {
+  animation: fadeIn 2s ease-in-out; /* Apply the fade-in animation */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Original position */
+}
+
+/* Styling for the profile image in the hero section */
+.hero img {
+  margin-top: 180px; /* Margin from the top */
+  width: 250px; /* Set image width */
+  height: 250px; /* Set image height */
+  border-radius: 50%; /* Make the image circular */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); /* Subtle shadow */
+  object-fit: cover; /* Maintain image aspect ratio while covering the entire area */
+}
+
+/* Styling for the main heading in the hero section */
+.hero h1 {
+  text-align: center; /* Center the text */
+  width: 70%; /* Width of the heading */
+  font-size: 60px; /* Large font size */
+  font-weight: 600; /* Bold text */
+}
+
+/* Styling for the span element that highlights the job title with gradient text */
+.hero span {
+  text-align: center; /* Center the text */
+  width: 70%; /* Span width */
+  font-size: 65px; /* Large font size */
+  font-weight: 600; /* Bold text */
+  background: linear-gradient(270deg, #00C9FF 10%, #92FE9D 100%); /* Gradient background */
+  background-clip: text; /* Clip the gradient to the text */
+  -webkit-background-clip: text; /* Safari compatibility */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show the background */
+}
+
+/* Styling for the paragraph in the hero section */
+.hero p {
+  width: 50%; /* Paragraph width */
+  text-align: center; /* Center the text */
+  font-size: 22px; /* Font size */
+  line-height: 40px; /* Space between lines */
+}
+
+/* Container for action buttons (connect and resume) */
+.hero-action {
+  display: flex; /* Flexbox for aligning buttons */
+  align-items: center; /* Center buttons vertically */
+  gap: 25px; /* Space between buttons */
+  font-size: 17px; /* Font size */
+  font-weight: 500; /* Semi-bold text */
+  margin-bottom: 50px; /* Margin from the bottom */
+}
+
+/* Styling for the 'Connect' button */
+.hero-connect {
+  padding: 25px 45px; /* Padding inside the button */
+  border-radius: 50px; /* Rounded corners */
+  background: linear-gradient(264deg, #24c6dc -5.09%, #514a9d 106.28%); /* Gradient background */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for the 'Resume' button */
+.hero-resume {
+  padding: 25px 75px; /* Padding inside the button */
+  border-radius: 50px; /* Rounded corners */
+  border: 2px solid #FFF; /* White border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Styling for the link inside the 'Resume' button */
+.hero-resume a {
+  text-decoration: none; /* Remove underline from the link */
+  color: #FFFFFF; /* White text color */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Semi-bold text */
+  display: block; /* Ensure the link takes up the full button area */
+}
+
+/* Hover effect for the 'Connect' button */
+.hero-connect:hover {
+  border: 2px solid white; /* Add a white border on hover */
+}
+
+/* Hover effect for the 'Resume' button */
+.hero-resume:hover {
+  border-color: #00C9FF; /* Change the border color on hover */
+}
+
+/* Hover effect for the link inside the 'Resume' button */
+.hero-resume a:hover {
+  color: #00C9FF; /* Change text color on hover */
+}
+
+/* Container for social media links */
+.social-links-container {
+  margin-top: 10px; /* Margin from the top */
+  text-align: center; /* Center the content */
+}
+
+/* Styling for the 'Find me in' title */
+.social-links-title {
+  font-size: 25px; /* Font size */
+  font-weight: 600; /* Bold text */
+  color: #ffffff; /* White text color */
+  margin-bottom: 15px; /* Space below the title */
+}
+
+/* Container for social media icons */
+.social-icons-container {
+  display: flex; /* Flexbox to align icons */
+  justify-content: center; /* Center the icons */
+  gap: 20px; /* Space between icons */
+}
+
+/* Styling for individual social media icon containers */
+.bannerIcon {
+  display: flex; /* Flexbox for centering the icon */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 60px; /* Icon container width */
+  height: 60px; /* Icon container height */
+  background-color: #000000; /* Dark background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Styling for the actual social media icon (SVG) inside the container */
+.bannerIcon svg {
+  width: 26px; /* Icon size */
+  height: 26px;
+  color: #ffffff; /* White color for the icon */
+}
+
+/* Hover effect for social media icons */
+.bannerIcon:hover {
+  transform: translateY(-5px); /* Lift the icon slightly on hover */
+  background-color: #ff0055; /* Default hover background color */
+}
+
+/* Hover effect for the first icon (GitHub) */
+.bannerIcon:nth-child(1):hover {
+  background-color: #333; /* Specific hover effect for GitHub */
+}
+
+/* Hover effect for the second icon (LinkedIn) */
+.bannerIcon:nth-child(2):hover {
+  background-color: #0077b5; /* LinkedIn blue color on hover */
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 768px) {
+  /* Reduce image size and adjust margin for tablets */
   .hero img {
-    margin-top: 180px;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
-    object-fit: cover;
+    margin-top: 120px;
+    width: 200px; /* Smaller image */
+    height: 200px; /* Smaller image */
   }
-  
+
+  /* Reduce the font size and adjust layout for tablets */
   .hero h1 {
-    text-align: center;
-    width: 70%;
-    font-size: 60px;
-    font-weight: 600;
+    margin-top: 30px;
+    width: 90%;
+    font-size: 40px;
   }
-  
+
+  /* Reduce the font size of the job title */
   .hero span {
-    text-align: center;
-    width: 70%;
-    font-size: 65px;
-    font-weight: 600;
-    background: linear-gradient(270deg, #00C9FF 10%, #92FE9D 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 45px; /* Smaller job title for tablets */
   }
-  
+
+  /* Reduce paragraph width and adjust font size */
   .hero p {
-    width: 50%;
-    text-align: center;
-    font-size: 22px;
-    line-height: 40px;
+    width: 60%;
+    font-size: 18px; /* Smaller font size */
+    line-height: 32px; /* Adjust line height */
+    margin: 10px 0px;
   }
-  
+
+  /* Reduce the gap and font size in the action buttons for tablets */
   .hero-action {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 17px;
+    gap: 16px;
+    font-size: 16px;
     font-weight: 500;
-    margin-bottom: 50px;
-  }
-  
-  .hero-connect {
-    padding: 25px 45px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #24c6dc -5.09%, #514a9d 106.28%);
-    cursor: pointer;
-  }
-  
-  .hero-resume {
-    padding: 25px 75px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
+    margin-bottom: 40px;
   }
 
-  .hero-resume a {
-    text-decoration: none;  /* Remove underline */
-    color: #FFFFFF;         /* Adjust color */
-    font-size: 16px;        /* Font size */
-    font-weight: 500;       /* Font weight */
-    display: block;         /* Block to fill the button area */
+  /* Adjust padding and border radius of buttons for tablets */
+  .hero-connect, .hero-resume {
+    padding: 20px 30px;
+    border-radius: 40px;
   }
-  
-  .hero-connect:hover {
-    border: 2px solid white;
-  }
-  
-  .hero-resume:hover {
-    border-color: #00C9FF;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+  /* Further reduce image size and margin for smaller screens */
+  .hero img {
+    margin-top: 80px;
+    width: 120px; /* Smaller image for mobile */
+    height: 120px;
   }
 
-  .hero-resume a:hover {
-    color: #00C9FF;         /* Change text color on hover */
+  /* Adjust heading font size and layout for mobile */
+  .hero h1 {
+    margin-top: 20px;
+    width: 100%; /* Full width */
+    font-size: 30px; /* Smaller font size */
   }
 
-  .social-links-container {
-    margin-top: 10px;
-    text-align: center;
+  /* Adjust job title font size */
+  .hero span {
+    font-size: 35px; /* Smaller job title */
   }
-  
-  .social-links-title {
-    font-size: 25px;
-    font-weight: 600;
-    color: #ffffff; /* Adjust to match the "Find me in" title color in the image */
-    margin-bottom: 15px;
+
+  /* Reduce paragraph width and font size for mobile */
+  .hero p {
+    width: 80%;
+    font-size: 16px;
+    line-height: 28px;
   }
-  
-  .social-icons-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+  /* Stack the action buttons vertically for mobile */
+  .hero-action {
+    flex-direction: column; /* Stack buttons */
+    gap: 12px; /* Smaller gap between buttons */
+    font-size: 15px; /* Smaller font size */
+    margin-bottom: 30px;
   }
-  
-  .bannerIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;  /* Width of the icon container */
-    height: 60px; /* Height of the icon container */
-    background-color: #000000; /* Dark background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow for the 3D effect */
-    transition: transform 0.3s, background-color 0.3s; /* Transition for hover effect */
+
+  /* Reduce padding and font size of buttons for mobile */
+  .hero-connect, .hero-resume {
+    padding: 15px 25px;
+    border-radius: 35px;
+    font-size: 14px; /* Smaller font size for buttons */
   }
-  
-  .bannerIcon svg {
-    width: 26px; /* Size of the social icon */
-    height: 26px;
-    color: #ffffff; /* White icon color */
-  }
-  
-  .bannerIcon:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    background-color: #ff0055; /* Change background color for hover */
-  }
-  
-  .bannerIcon:nth-child(1):hover {
-    background-color: #333; /* Different hover effect for GitHub */
-  }
-  
-  .bannerIcon:nth-child(2):hover {
-    background-color: #0077b5; /* LinkedIn blue color */
-  }
-  
-  /* Tablet Responsiveness */
-  @media (max-width: 768px) {
-    .hero img {
-      margin-top: 120px;
-      width: 200px; /* Reduced size for tablets */
-      height: 200px; /* Reduced size for tablets */
-    }
-  
-    .hero h1 {
-      margin-top: 30px;
-      width: 90%;
-      font-size: 40px;
-    }
-  
-    .hero span {
-      font-size: 45px; /* Adjusted for readability */
-    }
-  
-    .hero p {
-      width: 60%;
-      font-size: 18px;
-      line-height: 32px;
-      margin: 10px 0px;
-    }
-  
-    .hero-action {
-      gap: 16px;
-      font-size: 16px;
-      font-weight: 500;
-      margin-bottom: 40px;
-    }
-  
-    .hero-connect, .hero-resume {
-      padding: 20px 30px;
-      border-radius: 40px;
-    }
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 480px) {
-    .hero img {
-      margin-top: 80px;
-      width: 120px;
-      height: 120px;
-    }
-  
-    .hero h1 {
-      margin-top: 20px;
-      width: 100%;
-      font-size: 30px;
-    }
-  
-    .hero span {
-      font-size: 35px;
-    }
-  
-    .hero p {
-      width: 80%;
-      font-size: 16px;
-      line-height: 28px;
-    }
-  
-    .hero-action {
-      flex-direction: column;
-      gap: 12px;
-      font-size: 15px;
-      margin-bottom: 30px;
-    }
-  
-    .hero-connect, .hero-resume {
-      padding: 15px 25px;
-      border-radius: 35px;
-      font-size: 14px;
-    }
-  }
-  
+}
