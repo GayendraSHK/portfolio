@@ -1,21 +1,33 @@
-.footer {
-    margin: 50px 170px; /* Adds space around the footer on larger screens */
-    display: flex;
-    flex-direction: column; /* Vertically aligns elements inside the footer */
-    gap: 30px; /* Adds space between footer sections */
-}
-
 .footer-bottom {
     display: flex;
-    justify-content: space-between; /* Ensures even spacing between elements */
-    font-size: 18px; /* Font size for larger screens */
-    align-items: center; /* Vertically aligns items in the center */
+    flex-direction: column; /* Stacks items vertically */
+    // align-items: center; /* Centers both text and icons horizontally */
+    font-size: 18px;
+    gap: 20px; /* Space between the text and icons */
 }
 
 .footer-bottom-left {
-    margin-top: -30px; /* Adjusts top margin for proper positioning */
-    flex: 1; /* Allows it to grow and take up the available space */
-    padding: 30px 0; /* Adds padding to the top and bottom */
+    //text-align: center; /* Centers the copyright text */
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    gap: 20px; /* Space between icons */
+    margin-top: 20px; /* Pulls the icons upwards */
+}
+
+.social-icon {
+    font-size: 34px;
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    color: #999999;
 }
 
 @media (max-width: 768px) { /* For medium screens (tablets) */

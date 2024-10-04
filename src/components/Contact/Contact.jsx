@@ -129,24 +129,6 @@ const Contact = () => {
               <p>Matara, Sri Lanka</p>
             </div>
           </div>
-
-          {/* Social media links (GitHub, LinkedIn) */}
-          <div className="social-links-container">
-            <h2 className="social-links-title">
-              Find me in
-            </h2>
-            <div className="social-icons-container">
-              {/* GitHub link */}
-              <a href="https://github.com/GayendraSHK" target="_blank" rel="noopener noreferrer" className="bannerIcon">
-                <FaGithub />
-              </a>
-              {/* LinkedIn link */}
-              <a href="https://www.linkedin.com/in/kaveesha-gayendra" target="_blank" rel="noopener noreferrer" className="bannerIcon">
-                <FaLinkedinIn />
-              </a>
-            </div>
-          </div>
-
         </div>
 
         {/* Contact form */}
