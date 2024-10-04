@@ -196,4 +196,62 @@
     font-size: 16px; /* Smaller button on mobile */
     padding: 15px 35px;
   }
+
+  .contact-detail{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact {
+    gap: 40px;
+    margin: 50px 50px; /* Smaller margin for compact view */
+  }
+
+  .contact-title h1 {
+    font-size: 40px; /* Smaller title */
+  }
+
+  .contact-section {
+    width: 100%; /* Full width on mobile */
+  }
+
+  .contact-right input {
+    font-size: 14px;
+    width: 230px; /* Narrower inputs for mobile */
+    align-items: center;
+  }
+
+  .contact-right textarea {
+    font-size: 14px;
+    width: 200px; /* Narrower text area for mobile */
+  }
+
+  .contact-right{
+    align-items: center;
+  }
+
+  .contact-submit {
+    font-size: 16px; /* Smaller button on mobile */
+    padding: 15px 35px;
+
+  }
+
+  .contact-detail p{
+    font-size: 15px;
+  }
+
+  .contact-detail img{
+    width: 20px;
+  }
+}
+
+@media (max-width: 425px){
+  .contact-detail p{
+    font-size: 15px;
+  }
+
+  .contact-detail img{
+    width: 15px;
+  }
 }

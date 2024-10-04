@@ -133,11 +133,11 @@ const Contact = () => {
 
         {/* Contact form */}
         <form onSubmit={onSubmit} className='contact-right'>
-          <label htmlFor="">Your Name</label>
-          <input type="text" placeholder='Enter your name' name='name' />
-          <label htmlFor="">Your Email</label>
+          <label htmlFor="">Your Name:</label>
+          <input className='box' type="text" placeholder='Enter your name' name='name' />
+          <label htmlFor="">Your Email:</label>
           <input type="email"  placeholder='Enter your email' name='email'/>
-          <label htmlFor="">Write your message here</label>
+          <label htmlFor="">Write Your Message Here:</label>
           <textarea name="message" rows="8" placeholder='Enter your message'></textarea>
           <button type='submit' className="contact-submit">Send Now</button> {/* Submit button */}
         </form>
