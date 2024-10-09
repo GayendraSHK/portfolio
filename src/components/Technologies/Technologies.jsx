@@ -10,6 +10,10 @@ import html from '../../assets/html.svg'; // HTML icon
 import nodejs from '../../assets/nodejs.svg'; // Node.js icon
 import javascript from '../../assets/javascript.svg'; // JavaScript icon
 import nextjs from '../../assets/nextjs.svg'; // Next.js icon
+import java from '../../assets/java.png'; // Java icon
+import python from '../../assets/python.png'; // Python icon
+import c from '../../assets/C.svg'; // C icon
+import tailwind from '../../assets/tailwind.svg'; // Tailwind Css icon
 
 const Technologies = () => {
     const sectionRef = useRef(null); // Reference to the technologies section for IntersectionObserver
@@ -56,6 +60,18 @@ const Technologies = () => {
                 </div>
                 <div className="icon-wrapper">
                     <img src={css} alt="CSS" className="icon" /> {/* CSS icon */}
+                </div>
+                <div className="icon-wrapper">
+                    <img src={java} alt="Java" className="icon" /> {/* Java icon */}
+                </div>
+                <div className="icon-wrapper">
+                    <img src={python} alt="python" className="icon" /> {/* python icon */}
+                </div>
+                <div className="icon-wrapper">
+                    <img src={c} alt="C" className="icon" /> {/* C icon */}
+                </div>
+                <div className="icon-wrapper">
+                    <img src={tailwind} alt="Tailwind" className="icon" /> {/* Tailwind icon */}
                 </div>
                 <div className="icon-wrapper">
                     <img src={react_icon} alt="React" className="icon" /> {/* React icon */}
